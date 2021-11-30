@@ -1,0 +1,189 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  line-height: 1;
+  vertical-align: baseline;
+  list-style-type: none;
+  user-select: none;
+}
+
+body {
+  background-color: #fe617b;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+@media (min-width: 415px) {
+  body {
+    overflow: hidden;
+    background-color: black;
+  }
+}
+
+@media (min-width: 767px) {
+  body {
+    overflow: initial;
+  }
+}
+
+@media (min-width: 810px) {
+  body {
+    overflow: hidden;
+  }
+}
+
+.video {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (min-width: 415px) {
+  .video {
+    display: block;
+  }
+}
+
+@media (min-width: 767px) {
+  .video {
+    display: none;
+  }
+}
+
+@media (min-width: 810px) {
+  .video {
+    display: block;
+  }
+}
+
+.container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (min-width: 415px) {
+  .container {
+    display: none;
+  }
+}
+
+@media (min-width: 767px) {
+  .container {
+    display: block;
+  }
+}
+
+@media (min-width: 810px) {
+  .container {
+    display: none;
+  }
+}
+
+.container .img-grid {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container .img-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .star-container {
+  width: 100%;
+  position: absolute;
+  bottom: 30px;
+}
+
+.container .star-container .star-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container .star-container .star-wrapper .white-star {
+  width: 40px;
+  height: 40px;
+  font-size: 34px;
+  line-height: 41px;
+  text-align: center;
+  color: #fff;
+  background-color: #ee9aff;
+  border-radius: 50%;
+}
+
+.container .star-container .star-wrapper .js_red {
+  color: red;
+}
+
+.container .star-container .star-wrapper .js_black {
+  color: black;
+}
+
+.js_displayNone {
+  display: none !important;
+}
+
+.js_text {
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fe617b;
+  color: #fff;
+  background-color: rgba(254, 97, 123, 0.55);
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+.fa-phone {
+  transform: rotate(-15deg);
+  padding: 5px 0;
+  margin-left: 5px;
+}
+
+.js_heart {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  color: white;
+  background-color: rgba(254, 97, 123, 0.55);
+  padding: 1px 2px 1px 6px;
+  padding: 1px 8px 6px 8px;
+  padding: 2px 10px 9px 9px;
+}
+
+.cake {
+  width: 50px;
+  height: 50px;
+  animation: cakeOpacityScale 2s ease-in-out forwards;
+  animation-iteration-count: infinite;
+  opacity: 1;
+  padding: 0 0px 3px 0px;
+}
+
+@keyframes cakeOpacityScale {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.8);
+  }
+}

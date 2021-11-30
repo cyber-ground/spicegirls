@@ -1,0 +1,201 @@
+@charset "utf-8";
+*, *::before, *::after { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  line-height: 1;
+  vertical-align: baseline;
+  list-style-type: none;
+  user-select: none;
+}
+
+body {
+  background-color: rgb(254, 97, 123);
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  @media (min-width:415px) {
+    overflow: hidden;
+    background-color: black;
+  }
+  @media (min-width:767px) {
+    overflow: initial;
+  } 
+  @media (min-width:810px) {
+    overflow: hidden;
+  }
+}
+
+.video {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  @media (min-width:415px) {
+    display: block;
+  }
+  @media (min-width:767px) {
+    display: none;
+  } 
+  @media (min-width:810px) {
+    display: block;
+  }  // mouseMove heart this off
+}
+
+.container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  // position: fixed;     // !!!
+  // top: 0;              // !!!
+  // left: 0;             // !!!
+  // right: 0;            // !!!
+  @media (min-width:415px) {
+    display: none;
+  }
+  @media (min-width:767px) {
+    display: block;
+  }
+  @media (min-width:810px) {
+    display: none;
+  }  // mouseMove heart this off
+  .img-grid {
+    height: 100vh;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .star-container {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    .star-wrapper {
+      display: flex;
+      justify-content: space-around;
+      .white-star {
+        width: 40px;       
+        height: 40px;      
+        font-size: 34px;   
+        line-height: 41px;  
+        text-align: center;
+        color: #fff;
+        background-color: rgb(238, 154, 255);
+        border-radius: 50%;
+      }
+      .js_red {
+        color: red;
+      }
+      .js_black {
+        color: black;
+      }
+    }
+  }
+}
+
+.js_displayNone {
+  display: none !important;
+}
+
+.js_text {
+  position: absolute;
+  bottom: 25px; // 20
+  right: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(254, 97, 123);
+  color: #fff;
+  background-color:rgba(254, 97, 123, 0.55);
+  padding:  0 10px;
+  border-radius: 10px;
+}
+
+.fa-phone {
+  transform: rotate(-15deg);
+  padding: 5px 0;
+  margin-left: 5px;
+}
+
+.js_heart {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  // padding: 15px 15px 10px; // heart //
+  background-color:rgba(254, 97, 123, 0.55); // heart //
+  padding: 1px 2px 1px 6px; // cake //
+  padding: 1px 8px 6px 8px; // strawberries // 
+  padding: 2px 10px 9px 9px; // kiss1 // 
+  // padding:1px 10px 14px 10px; // kiss // 
+  // background-color:rgba(106, 255, 245, 0.55); // cake //
+}
+
+
+// --------------------------------------------------
+// cake animation ---
+
+.cake {
+  width: 50px;
+  height: 50px;
+  animation: cakeOpacityScale 2s ease-in-out forwards; // bc3
+  animation-iteration-count: infinite;
+  // animation: cakeOpacityScale 4s ease-in-out forwards;
+  opacity: 1;
+  // padding: 0 0 3px 2px; // strawberries //
+  padding: 0 0px 3px 0px; // kiss //
+}
+
+@keyframes cakeOpacityScale {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.8); // strawberries 1.4  kiss 1.8 
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.8); 
+  }
+}
+
+// --------------------------------------------------
+
+// --------------------------------------------------
+// mouseMove heart ---
+
+// .heart-grid {
+//   position: relative;
+//   overflow: hidden;
+//   .red-heart {
+//     font-size: 40px;
+//     color: red;
+//     z-index: 3;
+//     position: absolute;
+//     top:50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     pointer-events: none;
+//   }
+// }
+
+// --------------------------------------------------
+
+
+
+
+
+
+
+
+
+
